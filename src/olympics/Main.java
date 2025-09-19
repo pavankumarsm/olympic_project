@@ -41,7 +41,7 @@ public class Main {
         return value.replaceAll("^\"|\"$", "").trim();
     }
 
-    public static List<Athlete> fetchAthletes(String filePath) throws IOException {
+    private static List<Athlete> fetchAthletes(String filePath) throws IOException {
         List<Athlete> athletes = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             bufferedReader.readLine(); // skip header
@@ -73,7 +73,7 @@ public class Main {
         return athletes;
     }
 
-    public static List<NocRegion> fetchNOCRegions(String filePath) throws IOException {
+    private static List<NocRegion> fetchNOCRegions(String filePath) throws IOException {
         List<NocRegion> nocs = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             bufferedReader.readLine(); // skip header
@@ -95,7 +95,7 @@ public class Main {
     }
 
 
-    public static void main(String[] args) throws IOException {
+    private static void main(String[] args) throws IOException {
         String athletesFile = "src/Resources/athlete_events.csv";
         String nocFile = "src/Resources/noc_regions.csv";
 
@@ -115,7 +115,7 @@ public class Main {
         findCountryWiseMedalTallyIn2016(athletes);
     }
 
-    public static void findTheGoldMedalsWinnerYearWiseEachPlayer(List<Athlete> athletes) {
+    private static void findTheGoldMedalsWinnerYearWiseEachPlayer(List<Athlete> athletes) {
         if (athletes == null || athletes.isEmpty()) return;
 
         Map<Integer, Map<String, Integer>> yearWiseGoldMap = new TreeMap<>();
@@ -141,7 +141,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void findTopGoldMedalistEachYear(List<Athlete> athletes) {
+    private static void findTopGoldMedalistEachYear(List<Athlete> athletes) {
         if (athletes == null || athletes.isEmpty()) return;
 
         Map<Integer, Map<String, Integer>> yearWiseGoldMap = new TreeMap<>();
