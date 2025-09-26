@@ -168,7 +168,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void findAthleteWonGoldMedalIn1980AndAgeIsLessThan30(List<Athlete> athletes) {
+    private static void findAthleteWonGoldMedalIn1980AndAgeIsLessThan30(List<Athlete> athletes) {
         if (athletes == null || athletes.isEmpty()) return;
 
         Set<String> athleteNameWonGold = new TreeSet<>();
@@ -186,7 +186,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void findEventWiseMedalsIn1980(List<Athlete> athletes) {
+    private static void findEventWiseMedalsIn1980(List<Athlete> athletes) {
         if (athletes == null || athletes.isEmpty()) return;
 
         Map<String,Map<String,Integer>> eventWiseMedal = new HashMap<>();
@@ -231,7 +231,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void findFemaleAthleteWonMaxGold(List<Athlete> athletes) {
+    private static void findFemaleAthleteWonMaxGold(List<Athlete> athletes) {
         Map<String,Integer> maxGoldFemaleAthlete = new HashMap<>();
 
         for(Athlete athlete:athletes){
@@ -251,7 +251,7 @@ public class Main {
         System.out.println();
     }
 
-    public static void findAthleteParticipatedMorethanThreeOlympics(List<Athlete> athletes) {
+    private static void findAthleteParticipatedMorethanThreeOlympics(List<Athlete> athletes) {
 
         Map<String,Map<Integer,Boolean>> athleteNamePlayedMoreThanThree = new TreeMap<>();
         for(Athlete athlete:athletes){
