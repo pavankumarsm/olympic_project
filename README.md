@@ -23,3 +23,33 @@ It reads athlete and NOC (National Olympic Committee) datasets in CSV format, cl
 - Displaying a country-wise medal tally for a given year.
 
 The goal of this project is to practice Java file handling, collections, and data structures while exploring real-world sports data. It’s ideal for students, beginners, and anyone interested in Java + data analysis.
+
+
+## 📂 Project Structure
+<pre>
+
+  olympics/
+│── src/
+│   ├── olympics/
+│   │   ├── Main.java        # Main program with analysis functions
+│   │   ├── Athlete.java     # POJO for athlete details
+│   │   ├── NocRegion.java   # POJO for NOC details
+│── Resources/
+│   ├── athlete_events.csv   # Athlete data (from Kaggle)
+│   ├── noc_regions.csv      # NOC region mapping
+│── README.md
+
+</pre>
+
+
+
+## 🏗️ How It Works
+
+Reads CSV files using BufferedReader.
+
+Cleans and parses the data into Athlete and NocRegion objects.
+
+Uses Java Collections (Map, Set, List) to compute results.
+
+Displays outputs in the console.
+
